@@ -15,4 +15,9 @@ public class GreedyAgent implements Player {
             return 2;
         return 3;
     }
+
+    @Override
+    public String getEmail() {
+        return "r.sabirov@innopolis.ru";
+    }
 }

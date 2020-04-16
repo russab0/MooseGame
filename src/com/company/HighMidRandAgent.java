@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Random;
 
 public class HighMidRandAgent implements Player {
-    LinkedList<Integer> myPreviousMoves = new LinkedList<Integer>();
+    LinkedList<Integer> myPreviousMoves = new LinkedList<>();
     Random random = new Random();
 
     @Override
@@ -38,5 +38,10 @@ public class HighMidRandAgent implements Player {
         else
             move = getMid(xA, xB, xC);
         return move;
+    }
+
+    @Override
+    public String getEmail() {
+        return "r.sabirov@innopolis.ru";
     }
 }

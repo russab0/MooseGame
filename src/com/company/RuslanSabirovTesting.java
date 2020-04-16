@@ -87,8 +87,8 @@ public class RuslanSabirovTesting {
     }
 
     public static void main(String[] args) {
-        System.out.println("hello");
-        ArrayList<Player> players = new ArrayList<Player>();
+        System.out.println("GAMES BETWEEN EACH PAIR OF PLAYERS");
+        ArrayList<Player> players = new ArrayList<>();
         players.add(new RandomAgent());
         players.add(new GreedyAgent());
         players.add(new CopyCatAgent());
@@ -108,8 +108,9 @@ public class RuslanSabirovTesting {
         }
 
         System.out.println();
+        System.out.println("AVERAGE SCORES PER GAME:");
         for (int i = 0; i < players.size(); i++) {
-            System.out.println(players.get(i).getClass().getSimpleName() + ": " + scores[i]);
+            System.out.println(players.get(i).getClass().getSimpleName() + ": " + scores[i] / players.size());
         }
     }
 }

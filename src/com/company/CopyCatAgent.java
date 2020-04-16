@@ -29,4 +29,9 @@ public class CopyCatAgent implements Player {
         }
         return choice;
     }
+
+    @Override
+    public String getEmail() {
+        return "r.sabirov@innopolis.ru";
+    }
 }
