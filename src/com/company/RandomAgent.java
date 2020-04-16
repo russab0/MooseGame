@@ -13,7 +13,7 @@ public class RandomAgent implements Player {
 
     @Override
     public int move(int opponentLastMove, int xA, int xB, int xC) {
-        return random.nextInt(3) + 1;;
+        return random.nextInt(3) + 1;
     }
 
     @Override
