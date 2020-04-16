@@ -30,13 +30,23 @@ public class HighMidRandAgent implements Player {
         return 3;
     }
 
+    private boolean isNotEmpty(int choice, int xA, int xB, int xC) {
+        if (choice == 1)
+            return xA > 0;
+        if (choice == 2)
+            return xB > 0;
+        if (choice == 3)
+            return xC > 0;
+        return false;
+    }
+
     @Override
     public int move(int opponentLastMove, int xA, int xB, int xC) {
         int move;
-        if (random.nextInt(1) == 1)
-            move = getHigh(xA, xB, xC);
-        else
+        if (random.nextInt(1) == 1 && isNotEmpty(getMid(xA, xB, xC), xA, xB, xC))
             move = getMid(xA, xB, xC);
+        else
+            move = getHigh(xA, xB, xC);
         return move;
     }
 

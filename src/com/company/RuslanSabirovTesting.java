@@ -43,8 +43,13 @@ class Field {
         else {
             if (getByMove(move1) >= 2)
                 incByMove(move1, -2);
+            else if (getByMove(move1) == 1)
+                incByMove(move1, -1);
+
             if (getByMove(move2) >= 2)
                 incByMove(move2, -2);
+            else if (getByMove(move2) == 1)
+                incByMove(move2, -1);
         }
     }
 }
@@ -93,6 +98,8 @@ public class RuslanSabirovTesting {
         players.add(new GreedyAgent());
         players.add(new CopyCatAgent());
         players.add(new HighMidRandAgent());
+        players.add(new ProbabilisticXAgent());
+        players.add(new ProbabilisticPayoffAgent());
         double[] scores = new double[players.size()];
 
         for (int i = 0; i < players.size(); i++) {
