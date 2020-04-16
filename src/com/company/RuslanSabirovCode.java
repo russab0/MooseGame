@@ -3,7 +3,7 @@ package com.company;
 
 import java.util.Random;
 
-public class ProbabilisticXAgent implements Player {
+public class RuslanSabirovCode implements Player { // Probablistic X agent
     Random random = new Random();
 
     private boolean isNotEmpty(int choice, int xA, int xB, int xC) {
